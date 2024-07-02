@@ -15,4 +15,8 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     enabled = false,
   },
+  {
+    "nvim-pack/nvim-spectre",
+    ebabled = false,
+  },
 }
