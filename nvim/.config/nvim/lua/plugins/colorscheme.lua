@@ -1,7 +1,7 @@
 return {
   {
     "sainnhe/gruvbox-material",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       vim.g.gruvbox_material_foreground = "original"
@@ -12,12 +12,16 @@ return {
       vim.g.gruvbox_material_better_performance = 1
     end,
   },
-
+  {
+    lazy = true,
+    "aktersnurra/no-clown-fiesta.nvim",
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      -- colorscheme = "gruvbox-material",
       -- colorscheme = "catppuccin",
+      colorscheme = "no-clown-fiesta",
     },
   },
   {

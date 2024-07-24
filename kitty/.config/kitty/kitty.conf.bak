@@ -45,6 +45,7 @@ tab_activity_symbol ◉
 # active_tab_title_template "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}[{fmt.bold}{layout_name[:2].upper()}:{index}{fmt.nobold}]{'(%d)'%num_windows if num_windows > 1 else ''}: {(title[:6+(15 if title.startswith('aloha@daisilia:') else 0)]+'…'+title[-6:]) if title.rindex(title[-1]) + 1 > (13+(15 if title.startswith("aloha@daisilia:") else 0)) else title}"
 
 # Window
+hide_window_decorations yes
 # linux_display_server wayland
 
 # Fzf

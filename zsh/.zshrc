@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="af-magic"
-
+# ZSH_THEME="refined"
+ ZSH_THEME="lambda"
 source $ZSH/oh-my-zsh.sh
 
 
@@ -17,13 +17,13 @@ export PATH=$VCPKG_ROOT:$PATH
 
 zstyle ':omz:update' frequency 13
 
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git themes zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
+plugins=(git themes zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
