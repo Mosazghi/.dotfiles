@@ -23,7 +23,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git themes zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
+plugins=(git themes zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -76,7 +76,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias n="nvim"
 # alias ls="ls --color"
-alias cat="batcat"
+# alias cat="batcat"
 alias kittyupdate="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 alias idf="idf.py"
