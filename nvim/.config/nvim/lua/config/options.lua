@@ -92,10 +92,6 @@ opt.formatoptions = opt.formatoptions
   + "l" -- long lines are not broken
   + "j" -- remove comment when joining lines
 opt.syntax = "off"
-opt.spell = false
 
 -- Colors
 opt.termguicolors = true
-
--- CMP
-opt.completeopt = { "menu", "menuone", "noselect" }

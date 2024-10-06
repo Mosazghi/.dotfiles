@@ -2,8 +2,11 @@ return {
   "HakonHarnes/img-clip.nvim",
   event = "VeryLazy",
   opts = {
-    -- add options here
-    -- or leave it empty to use the default settings
+    filetypes = {
+      markdown = {
+        template = "![$FILE_NAME_NO_EXT]($FILE_PATH)",
+      },
+    },
   },
   keys = {
     -- suggested keymap

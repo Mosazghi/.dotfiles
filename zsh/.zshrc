@@ -75,8 +75,8 @@ export PATH=/path/to/mxe/usr/bin:$PATH
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias n="nvim"
-# alias ls="ls --color"
-# alias cat="batcat"
+alias ls="ls --color"
+alias cat="batcat"
 alias kittyupdate="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 alias idf="idf.py"
@@ -87,3 +87,5 @@ alias idfr="idfb && idff"
 alias idfrm="idfr && idf monitor"
 alias lg="lazygit"
 alias mr="mosquitto -v -c /etc/mosquitto/conf.conf"
+
+export QSYS_ROOTDIR="/home/mosa/intelFPGA_lite/21.1/quartus/sopc_builder/bin"
