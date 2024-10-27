@@ -5,7 +5,8 @@ return {
     priority = 1000,
     config = function()
       vim.g.gruvbox_material_foreground = "original"
-      vim.g.gruvbox_material_background = "hard"
+      vim.g.gruvbox_material_foreground = "original"
+      vim.g.gruvbox_material_cursor = "purple"
 
       vim.g.gruvbox_material_enable_italic = 1
       vim.g.gruvbox_material_transparent_background = 2
@@ -16,6 +17,7 @@ return {
     lazy = true,
     "aktersnurra/no-clown-fiesta.nvim",
   },
+
   {
     "LazyVim/LazyVim",
     opts = {
