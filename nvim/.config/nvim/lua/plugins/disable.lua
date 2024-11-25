@@ -19,4 +19,13 @@ return {
     "nvim-pack/nvim-spectre",
     ebabled = false,
   },
+
+  {
+    "nvim-lualine/lualine.nvim",
+    enabled = false,
+  },
+  {
+    "yioneko/nvim-vtsls",
+    enabled = false,
+  },
 }
