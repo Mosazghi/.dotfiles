@@ -1,30 +1,19 @@
 vim.diagnostic.config({ virtual_text = false }) -- tiny-inline diag.
 vim.g.editorconfig = false
 local opt = vim.opt
-
--- opt.background = 'dark'
+vim.opt.textwidth = 80
+vim.opt.formatoptions:append("t")
 opt.backup = false
 opt.cmdheight = 0
-opt.completeopt = { "menu", "menuone", "noselect" }
-opt.conceallevel = 3
 opt.confirm = true
-opt.wrap = true
+vim.g.wrapmargin = 0
 opt.expandtab = true
 opt.fillchars:append({ eob = " " })
 opt.grepprg = "rg --vimgrep"
--- opt.guifont = 'BlexMono Nerd Font Mono:h13'
 opt.ignorecase = true
--- opt.inccommand = 'split'
 opt.laststatus = 3
--- opt.list = true
--- opt.listchars:append {
---     eol = ' ',
---     tab = '│ ',
---     trail = ' ',
--- }
 opt.mouse = "a"
 opt.number = true
--- opt.numberwidth = 1
 opt.pumheight = 10
 opt.relativenumber = true
 opt.scrolloff = 8
@@ -52,4 +41,3 @@ opt.undolevels = 10000
 opt.updatetime = 200
 opt.virtualedit = "block"
 opt.guicursor = "n-v-c-i:block"
--- opt.wildoptions = ''

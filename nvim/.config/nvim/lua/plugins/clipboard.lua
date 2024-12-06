@@ -4,7 +4,8 @@ return {
   opts = {
     filetypes = {
       markdown = {
-        template = "![$FILE_NAME_NO_EXT]($FILE_PATH)",
+        --<img src="Assets/icon.png" width="200">
+        template = '<img src="$FILE_PATH" alt="$FILE_NAME_NO_EXT" width="400"/>',
       },
     },
   },
