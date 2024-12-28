@@ -1,7 +1,7 @@
 vim.diagnostic.config({ virtual_text = false }) -- tiny-inline diag.
 vim.g.editorconfig = false
 local opt = vim.opt
-vim.opt.textwidth = 80
+vim.opt.textwidth = 90
 vim.opt.formatoptions:append("t")
 opt.backup = false
 opt.cmdheight = 0
@@ -41,3 +41,16 @@ opt.undolevels = 10000
 opt.updatetime = 200
 opt.virtualedit = "block"
 opt.guicursor = "n-v-c-i:block"
+
+vim.g.snacks_animate = false
+vim.opt.list = true
+vim.opt.listchars = {
+  lead = "·",
+  trail = "•",
+  multispace = "∅",
+  nbsp = "‡",
+  tab = "⇥»",
+  precedes = "❮",
+  extends = "❯",
+  -- eol = "↵",
+}
