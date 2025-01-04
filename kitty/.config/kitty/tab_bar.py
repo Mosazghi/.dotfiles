@@ -28,8 +28,11 @@ UNPLUGGED_ICONS = {
 }
 CALENDAR_CLOCK_ICON = "󰃰 "
 TERMINAL_ICON = " "
+MEM_ICON = "󰍛 "
 ERR_ICON = " "
+
 REFRESH_TIME = 1
+
 
 
 def _get_active_process_name_cell() -> dict:
@@ -89,9 +92,21 @@ def _get_battery_cell() -> dict:
 
     return cell
 
+def _get_ram_usage() -> dict:
+    cell = {"icon": ERR_ICON, "icon_bg_color": "#bdaff9", "text": ""}
+    with open('/proc/meminfo', 'r') as meminfo:
+        meminfo_lines = meminfo.readlines()
+        mem_total = int(meminfo_lines[0].split()[1])
+        mem_available = int(meminfo_lines[2].split()[1])
+        mem_used = mem_total - mem_available
+        mem_percent = (mem_used / mem_total) * 100
+        cell["text"] = f"{mem_percent:.1f}" + "%"
+        cell["icon"] = MEM_ICON
+    return cell
+
 
 def _create_cells() -> list[dict]:
-    return [_get_battery_cell(), _get_active_process_name_cell(), _get_datetime_cell()]
+    return [_get_ram_usage(), _get_battery_cell(), _get_active_process_name_cell(), _get_datetime_cell()]
 
 
 def _draw_right_status(screen: Screen, is_last: bool, draw_data: DrawData) -> int:
