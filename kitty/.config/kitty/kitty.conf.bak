@@ -45,6 +45,6 @@ tab_title_template "{index}  {tab.active_wd.rsplit('/', 1)[-1]}"
 hide_window_decorations yes
 # Theme
 # BEGIN_KITTY_THEME
-# Wez
+# GitHub Dark
 include current-theme.conf
 # END_KITTY_THEME

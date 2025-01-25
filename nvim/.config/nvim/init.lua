@@ -3,6 +3,6 @@ vim.g.loaded_netrwPlugin = 1
 require("config.lazy")
 require("config.statusline")
 
-require("multicursors").setup({
-  hint_config = false,
-})
+-- require("multicursors").setup({
+--   hint_config = false,
+-- })

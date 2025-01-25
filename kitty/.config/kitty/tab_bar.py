@@ -34,7 +34,6 @@ ERR_ICON = " "
 REFRESH_TIME = 1
 
 
-
 def _get_active_process_name_cell() -> dict:
     cell = {"icon": TERMINAL_ICON, "icon_bg_color": "#a8e4a4", "text": ""}
     boss = get_boss()
@@ -92,9 +91,10 @@ def _get_battery_cell() -> dict:
 
     return cell
 
+
 def _get_ram_usage() -> dict:
     cell = {"icon": ERR_ICON, "icon_bg_color": "#bdaff9", "text": ""}
-    with open('/proc/meminfo', 'r') as meminfo:
+    with open("/proc/meminfo", "r") as meminfo:
         meminfo_lines = meminfo.readlines()
         mem_total = int(meminfo_lines[0].split()[1])
         mem_available = int(meminfo_lines[2].split()[1])
@@ -106,7 +106,12 @@ def _get_ram_usage() -> dict:
 
 
 def _create_cells() -> list[dict]:
-    return [_get_ram_usage(), _get_battery_cell(), _get_active_process_name_cell(), _get_datetime_cell()]
+    return [
+        _get_ram_usage(),
+        _get_battery_cell(),
+        _get_active_process_name_cell(),
+        _get_datetime_cell(),
+    ]
 
 
 def _draw_right_status(screen: Screen, is_last: bool, draw_data: DrawData) -> int:
@@ -122,7 +127,7 @@ def _draw_right_status(screen: Screen, is_last: bool, draw_data: DrawData) -> in
     screen.cursor.x = screen.columns - right_status_length
 
     default_bg = as_rgb(int(draw_data.default_bg))
-    tab_fg = as_rgb(int(draw_data.inactive_fg))
+    tab_fg = as_rgb(int(to_color("#ffffff")))
 
     screen.cursor.bg = default_bg
     for c in cells:

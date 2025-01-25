@@ -1,8 +1,6 @@
-vim.diagnostic.config({ virtual_text = false }) -- tiny-inline diag.
 vim.g.editorconfig = false
 local opt = vim.opt
-vim.opt.textwidth = 90
-vim.opt.formatoptions:append("t")
+vim.opt.textwidth = 100
 opt.backup = false
 opt.cmdheight = 0
 opt.confirm = true

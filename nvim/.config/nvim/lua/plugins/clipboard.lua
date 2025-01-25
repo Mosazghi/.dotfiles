@@ -5,7 +5,7 @@ return {
     filetypes = {
       markdown = {
         --<img src="Assets/icon.png" width="200">
-        template = '<img src="$FILE_PATH" alt="$FILE_NAME_NO_EXT" width="400"/>',
+        template = '<img src="$FILE_PATH" alt="$FILE_NAME_NO_EXT" width="500"/>',
       },
     },
   },
