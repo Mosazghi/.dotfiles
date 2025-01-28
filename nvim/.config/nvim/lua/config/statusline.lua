@@ -42,7 +42,7 @@ local function mode()
   local current_mode = vim.api.nvim_get_mode().mode
   local mode_name = mode_map[current_mode] or current_mode
 
-  return string.format("%%#StatusLineMode# %s %%*", mode_name)
+  return string.format("%%#StatusLineMode# [%s] %%*", mode_name)
 end
 
 --- @return string
@@ -177,7 +177,7 @@ end
 local function git_diff_added()
   local added = get_git_diff("added")
   if added > 0 then
-    return string.format("%%#StatusLineGitDiffAdded# %s%%*", added)
+    return string.format("%%#StatusLineGitDiffAdded# %s%%*", added)
   end
 
   return ""
@@ -197,7 +197,7 @@ end
 local function git_diff_removed()
   local removed = get_git_diff("removed")
   if removed > 0 then
-    return string.format("%%#StatusLineGitDiffRemoved# %s%%*", removed)
+    return string.format("%%#StatusLineGitDiffRemoved# %s%%*", removed)
   end
 
   return ""
