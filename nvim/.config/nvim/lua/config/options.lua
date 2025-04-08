@@ -30,14 +30,14 @@ opt.undofile = true
 opt.undolevels = 10000
 
 vim.g.snacks_animate = false
-vim.opt.list = true
-vim.opt.listchars = {
-  lead = "·",
-  trail = "•",
-  multispace = "∅",
-  nbsp = "‡",
-  tab = "⇥»",
-  precedes = "❮",
-  extends = "❯",
-  -- eol = "↵",
-}
+-- vim.opt.list = true
+-- vim.opt.listchars = {
+--   lead = "·",
+--   trail = "•",
+--   multispace = "∅",
+--   nbsp = "‡",
+--   tab = "⇥»",
+--   precedes = "❮",
+--   extends = "❯",
+--   -- eol = "↵",
+-- }
