@@ -1,6 +1,9 @@
 return {
 
   {
+    "NTBBloodbath/doombox.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = function()

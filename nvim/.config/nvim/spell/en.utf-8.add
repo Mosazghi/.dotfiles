@@ -25,3 +25,5 @@ Frontend
 Backend
 uncomment
 backend
+enum
+camelCase
