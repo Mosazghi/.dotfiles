@@ -3,6 +3,11 @@ vim.g.loaded_netrwPlugin = 1
 require("config.lazy")
 require("config.statusline")
 
--- require("multicursors").setup({
---   hint_config = false,
--- })
+require("lspconfig").clangd.setup({
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--compile-commands-dir=build",
+    "--header-insertion=never",
+  },
+})

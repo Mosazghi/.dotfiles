@@ -13,6 +13,13 @@ return {
     -- C-k: Toggle signature help
     --
     -- See the full "keymap" documentation for information on defining your own keymap.
-    keymap = { preset = "super-tab" },
+    keymap = {
+      preset = "super-tab",
+      ["<Tab>"] = {
+        require("blink.cmp.keymap.presets").get("super-tab")["<Tab>"][1],
+        require("lazyvim.util.cmp").map({ "snippet_forward", "ai_accept" }),
+        "fallback",
+      },
+    },
   },
 }

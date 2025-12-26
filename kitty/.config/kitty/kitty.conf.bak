@@ -45,14 +45,23 @@ tab_title_template "{index}  {tab.active_wd.rsplit('/', 1)[-1]}"
 hide_window_decorations yes
 # Theme
 # BEGIN_KITTY_THEME
-# Wez
+# Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="Recursive Mono Linear Static"
+font_family      family="JetBrains Mono NL"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
+#
+#
+# tab bar customization
+tab_bar_style powerline
+tab_powerline_style slanted
+tab_bar_edge bottom
+tab_bar_align left
+active_tab_font_style   bold
+inactive_tab_font_style normal

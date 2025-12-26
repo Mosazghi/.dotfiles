@@ -1,8 +1,4 @@
 return {
-
-  {
-    "NTBBloodbath/doombox.nvim",
-  },
   {
     "LazyVim/LazyVim",
     opts = {
@@ -11,6 +7,7 @@ return {
       end,
     },
   },
+  -- { "Mofiqul/vscode.nvim" },
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -20,32 +17,45 @@ return {
       no_italic = true,
       term_colors = true,
       transparent_background = false,
-      styles = {
-        comments = {},
-        conditionals = {},
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-      },
-      color_overrides = {
-        mocha = {
-          base = "#000000",
-          mantle = "#000000",
-          crust = "#000000",
-        },
-      },
       integrations = {
+        aerial = true,
+        alpha = true,
+        cmp = true,
+        dashboard = true,
+        flash = true,
+        fzf = true,
+        grug_far = true,
+        gitsigns = true,
+        headlines = true,
+        illuminate = true,
+        indent_blankline = { enabled = true },
+        leap = true,
+        lsp_trouble = true,
+        mason = true,
+        markdown = true,
+        mini = true,
         dropbar = {
           enabled = true,
           color_mode = true,
         },
-        { blink_cmp = true },
+        blink_cmp = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
+          },
+        },
+        noice = true,
+        notify = true,
+        semantic_tokens = true,
+        snacks = true,
+        telescope = true,
+        treesitter = true,
+        treesitter_context = true,
+        which_key = true,
       },
     },
   },

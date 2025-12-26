@@ -4,10 +4,6 @@ return {
     enabled = false,
   },
   {
-    "echasnovski/mini.comment",
-    enabled = false,
-  },
-  {
     "folke/noice.nvim",
     enabled = false,
   },
@@ -39,7 +35,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    enabled = false,
+    enabled = true,
   },
   {
     "yioneko/nvim-vtsls",
