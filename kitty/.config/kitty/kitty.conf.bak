@@ -1,0 +1,67 @@
+# Misc
+shell_integration  no-cursor
+sync_to_monitor no 
+editor /opt/nvim-linux64/bin/nvim
+confirm_os_window_close 0
+scrollback_lines 2000
+wheel_scroll_min_lines 1
+
+# Bell
+enable_audio_bell no
+bell_on_tab no
+notify_on_cmd_finish never
+
+# Font
+font_size     10.0
+# font_family SauceCodePro NF
+# bold_font  SauceCodePro NF Bold
+# italic_font SauceCodePro NF Italic  
+# bold_italic_font SauceCodePro NFM Bold Italic 
+disable_ligatures never
+
+
+# Keymaps 
+map kitty_mod+. next_window
+map kitty_mod+, previous_window
+map kitty_mod+enter launch --cwd=current --type=window
+map cmd+enter       launch --cwd=current --type=window
+map kitty_mod+t     launch --cwd=current --type=tab
+map cmd+t           launch --cwd=current --type=tab
+map ctrl+f launch --type=overlay --stdin-source=@screen_scrollback /home/mosa/.fzf/bin/fzf --no-sort --no-mouse --exact -i
+
+# Tab bar
+tab_bar_edge top
+tab_bar_margin_width 0.0
+tab_bar_margin_height 0.0 0.0
+tab_bar_style custom
+tab_bar_align left
+tab_bar_min_tabs 1
+tab_separator ""
+tab_activity_sybol none
+tab_title_template "{index}  {tab.active_wd.rsplit('/', 1)[-1]}"
+
+
+# Window 
+hide_window_decorations yes
+# Theme
+# BEGIN_KITTY_THEME
+# Catppuccin-Macchiato
+include current-theme.conf
+# END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrains Mono NL"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
+#
+#
+# tab bar customization
+tab_bar_style powerline
+tab_powerline_style slanted
+tab_bar_edge bottom
+tab_bar_align left
+active_tab_font_style   bold
+inactive_tab_font_style normal
