@@ -1,6 +1,12 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export ZSH="$HOME/.oh-my-zsh"
 
-# ZSH_THEME="refined"
 ZSH_THEME="lambda"
 source $ZSH/oh-my-zsh.sh
 
@@ -70,13 +76,16 @@ export QT_QPA_PLATFORM=xcb
 export IDF_PATH=~/esp/esp-idf
 export PATH=~/esp/xtensa-esp32-elf/bin:$PATH
 export PATH=/path/to/mxe/usr/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 # Aliases 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias n="nvim"
-alias ls="ls --color"
-alias cat="batcat"
+alias ls="eza -lh --icons --git"
+alias tree="eza --tree"
+alias cat="bat"
 alias kittyupdate="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 alias idf="idf.py"
@@ -87,3 +96,30 @@ alias idfr="idfb && idff"
 alias idfrm="idfr && idf monitor"
 alias lg="lazygit"
 alias mr="mosquitto -v -c /etc/mosquitto/conf.conf"
+alias py="python"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias ff="fastfetch"
+alias open="xdg-open"
+
+# fnm
+FNM_PATH="/home/mosa/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# pnpm
+export PNPM_HOME="/home/mosa/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+eval "$(starship init zsh)"
+
+export PATH="$(go env GOPATH)/bin:$PATH"
+
+export EDITOR=nvim # for yazi
