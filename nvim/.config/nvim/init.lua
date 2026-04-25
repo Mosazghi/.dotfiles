@@ -10,4 +10,13 @@ require("lspconfig").clangd.setup({
     "--compile-commands-dir=build",
     "--header-insertion=never",
   },
-})
+}
+)
+
+vim.keymap.set("n", "<leader>å", function()
+  local lang = vim.fn.input("Language: ")
+  local lines = { "```" .. lang, "", "```" }
+  vim.api.nvim_put(lines, "l", true, true)
+  -- Move cursor to the empty line inside the code block
+  vim.cmd("normal! k")
+end, { desc = "Insert code block" })

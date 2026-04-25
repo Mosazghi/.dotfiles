@@ -1,7 +1,7 @@
 # Misc
 shell_integration  no-cursor
 sync_to_monitor no 
-editor /opt/nvim-linux64/bin/nvim
+editor /usr/bin/nvim
 confirm_os_window_close 0
 scrollback_lines 2000
 wheel_scroll_min_lines 1
@@ -13,10 +13,6 @@ notify_on_cmd_finish never
 
 # Font
 font_size     10.0
-# font_family SauceCodePro NF
-# bold_font  SauceCodePro NF Bold
-# italic_font SauceCodePro NF Italic  
-# bold_italic_font SauceCodePro NFM Bold Italic 
 disable_ligatures never
 
 
@@ -45,13 +41,12 @@ tab_title_template "{index}  {tab.active_wd.rsplit('/', 1)[-1]}"
 hide_window_decorations yes
 # Theme
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Wez
 include current-theme.conf
 # END_KITTY_THEME
 
-
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrains Mono NL"
+font_family      family="Hack"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
