@@ -1,5 +1,13 @@
 return {
   {
+    "rosekamallove/vscode-dark-2026.nvim",
+    lazy = false,
+    priority = 1000,
+    -- config = function()
+    --   vim.cmd.colorscheme("vscode-dark-2026")
+    -- end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = function()
