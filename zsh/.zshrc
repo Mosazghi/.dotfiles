@@ -128,3 +128,10 @@ export EDITOR=nvim # for yazi
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 eval "$(fnm env --use-on-cd)"
+
+# fnm
+FNM_PATH="/home/mosa/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
