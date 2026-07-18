@@ -13,7 +13,16 @@ require("lspconfig").clangd.setup({
 })
 require("neotest").setup({
   adapters = {
-    require("neotest-gtest").setup({}),
+    require("neotest").setup({
+      is_test_file = function(file_path)
+        return vim.endswith(file_path, "_test.cpp")
+          or vim.endswith(file_path, "Test.cpp")
+          or vim.startswith(file_path, "test_")
+      end,
+      get_test_directories = function()
+        return { "build", "out", "build/tests" }
+      end,
+    }),
   },
 })
 
