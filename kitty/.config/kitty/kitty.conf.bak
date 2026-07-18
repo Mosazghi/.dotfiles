@@ -38,7 +38,7 @@ tab_title_template "{index}  {tab.active_wd.rsplit('/', 1)[-1]}"
 
 
 # Window 
-hide_window_decorations yes
+# hide_window_decorations yes
 # Theme
 # BEGIN_KITTY_THEME
 # Wez
@@ -46,7 +46,7 @@ include current-theme.conf
 # END_KITTY_THEME
 
 # BEGIN_KITTY_FONTS
-font_family      family="Hack"
+font_family      family="Hurmit Nerd Font"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -60,3 +60,5 @@ tab_bar_edge bottom
 tab_bar_align left
 active_tab_font_style   bold
 inactive_tab_font_style normal
+
+map f7>c goto_session ~/Projects/425116-sds-bt-23/launch.kitty-session

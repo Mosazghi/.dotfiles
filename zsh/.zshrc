@@ -71,7 +71,7 @@ zstyle ':completion:*' list-prompt   ''
 zstyle ':completion:*' select-prompt ''
 zstyle ':fzf-tab:complete:cd:*' fzf-preview "ls --color $realpath"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
-export BAT_THEME=gruvbox-dark
+export BAT_THEME="Catppuccin Macchiato"
 export QT_QPA_PLATFORM=xcb
 export IDF_PATH=~/esp/esp-idf
 export PATH=~/esp/xtensa-esp32-elf/bin:$PATH
@@ -85,7 +85,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias n="nvim"
 alias ls="eza -lh --icons --git"
 alias tree="eza --tree"
-alias cat="bat"
+alias cat="batcat"
 alias kittyupdate="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 alias idf="idf.py"
@@ -128,6 +128,13 @@ export EDITOR=nvim # for yazi
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 eval "$(fnm env --use-on-cd)"
+
+# fnm
+FNM_PATH="/home/mosa/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
 
 # fnm
 FNM_PATH="/home/mosa/.local/share/fnm"

@@ -188,6 +188,7 @@ install_core() {
     install_pkg "tar" tar
     install_pkg "starship" starship
     install_pkg_w_curl "fnm" "fnm" "https://fnm.vercel.app/install"
+    install_pkg_w_curl "rustup" "rustup" "https://sh.rustup.rs"
     install_pkg "go" golang-go go
     install_pkg "cargo" cargo
 
