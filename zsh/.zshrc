@@ -77,8 +77,8 @@ export IDF_PATH=~/esp/esp-idf
 export PATH=~/esp/xtensa-esp32-elf/bin:$PATH
 export PATH=/path/to/mxe/usr/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#source <(fzf --zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 # Aliases 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
